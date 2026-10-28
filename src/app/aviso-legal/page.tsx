@@ -19,6 +19,7 @@ export default function AvisoLegalPage() {
           <li>Nombre comercial: {d.nombreComercial}</li>
           <li>NIF/CIF: {d.nifCif}</li>
           <li>Domicilio social: {d.domicilioSocial}</li>
+          <li>Domicilio donde atiende el negocio: {d.domicilioFiscal}</li>
           <li>Correo de contacto: {d.correoContacto}</li>
           <li>Teléfono: {d.telefono}</li>
           <li>Datos registrales (si corresponden): {d.datosRegistrales}</li>

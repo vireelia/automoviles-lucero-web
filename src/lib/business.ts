@@ -14,11 +14,18 @@ export const business = {
 
 export const PENDIENTE = "[PENDIENTE DE CONFIRMAR]";
 
+// Datos fiscales reales confirmados (tarjeta de identificación fiscal real,
+// AEAT, 28/10/2026) -- razón social y NIF/CIF ya no están pendientes.
 export const datosLegalesPendientes = {
-  razonSocial: PENDIENTE,
+  razonSocial: "Autolunas Laguna Madrid SL",
   nombreComercial: business.nombreComercial,
-  nifCif: PENDIENTE,
-  domicilioSocial: PENDIENTE,
+  nifCif: "B88468749",
+  // Domicilio social real (el registrado en la tarjeta de la AEAT) --
+  // distinto del domicilio fiscal/local real donde atiende el negocio
+  // (Calle Cayetano Pando, 3, Madrid), que ya aparece en otras
+  // comunicaciones reales del propio negocio.
+  domicilioSocial: "Calle Cuart de Poblet, núm. 121, planta 2, puerta IZ, 28047 Madrid",
+  domicilioFiscal: "Calle Cayetano Pando, núm. 3, planta BJ, 28047 Madrid",
   correoContacto: PENDIENTE,
   telefono: business.telefonoContacto,
   datosRegistrales: PENDIENTE,
