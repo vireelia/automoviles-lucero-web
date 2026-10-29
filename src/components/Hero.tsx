@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { business } from "@/lib/business";
 
 export function Hero() {
@@ -36,13 +37,15 @@ export function Hero() {
             ))}
           </ul>
         </div>
-        <div className="grid grid-cols-2 gap-4" aria-hidden="true">
-          <div className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-white/10 text-sm text-white/60">
-            Fotografía de un coche
-          </div>
-          <div className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-white/10 text-sm text-white/60">
-            Fotografía de una furgoneta
-          </div>
+        <div className="overflow-hidden rounded-2xl">
+          <Image
+            src="/hero-compramos-tu-coche.jpg"
+            alt={`${business.nombreComercial} compra coches, furgonetas, camionetas y todoterrenos -- tasación gratuita y entrega inmediata`}
+            width={750}
+            height={750}
+            priority
+            className="h-full w-full object-cover"
+          />
         </div>
       </div>
     </section>
