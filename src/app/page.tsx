@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
 import { VehicleTypeCards } from "@/components/VehicleTypeCards";
+import { Comparacion } from "@/components/Comparacion";
 import { HowItWorks } from "@/components/HowItWorks";
 import { TrustSection } from "@/components/TrustSection";
 import { FAQ } from "@/components/FAQ";
@@ -20,6 +21,7 @@ export default function Home() {
     <>
       <Hero />
       <VehicleTypeCards />
+      <Comparacion />
       <HowItWorks />
 
       <section id="formulario" className="mx-auto max-w-2xl px-4 py-14 sm:px-6 sm:py-20">

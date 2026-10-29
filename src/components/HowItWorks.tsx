@@ -1,19 +1,21 @@
+// Pasos reales, con los datos reales que de verdad se piden (ver
+// comprasCriterios.datosParaTasar en business.ts) -- confirmados por
+// Ramón, 29/10/2026.
 const pasos = [
   {
     numero: "1",
-    titulo: "Cuéntanos qué vehículo tienes",
-    texto: "El propietario facilita la información básica del vehículo y sus datos de contacto.",
+    titulo: "Cuéntanos tu vehículo",
+    texto: "Matrícula, marca, modelo, año, kilómetros, estado y fotografías -- desde el formulario de esta página.",
   },
   {
     numero: "2",
-    titulo: "Revisamos tu solicitud",
-    texto: "El equipo comercial analiza los datos y contacta con el propietario para ampliar la información necesaria.",
+    titulo: "Te llamamos con tu valoración",
+    texto: "Tasación gratuita y sin compromiso. En poco más de una hora puedes tener una respuesta.",
   },
   {
     numero: "3",
-    titulo: "Recibe una propuesta",
-    texto:
-      "Automóviles Lucero estudia la posible compra y explica las condiciones. La compraventa se realiza únicamente si ambas partes están de acuerdo.",
+    titulo: "Cobras en el momento",
+    texto: "Si aceptas, nos encargamos del cambio de titularidad y de todos los trámites. Pago en el momento de la compra.",
   },
 ];
 

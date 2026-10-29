@@ -1,4 +1,5 @@
 import { ValuationForm } from "@/components/ValuationForm";
+import { Comparacion } from "@/components/Comparacion";
 import { HowItWorks } from "@/components/HowItWorks";
 import { TrustSection } from "@/components/TrustSection";
 import { FAQ } from "@/components/FAQ";
@@ -32,6 +33,7 @@ export function VehicleLandingContent({
         </ul>
       </section>
 
+      <Comparacion />
       <HowItWorks />
 
       <section id="formulario" className="mx-auto max-w-2xl px-4 py-14 sm:px-6 sm:py-20">
