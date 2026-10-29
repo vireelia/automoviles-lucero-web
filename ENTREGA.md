@@ -81,10 +81,28 @@ datos reales (tarjeta de identificación fiscal de la AEAT + confirmación
 directa de Eliud) en `src/lib/business.ts`, aviso legal y política de
 privacidad.
 
+## 4bis. Criterios reales de compra — confirmados (29/10/2026)
+
+Ramón respondió en audio un cuestionario real preparado por ti sobre qué
+compran, condiciones, zona, pago y diferenciación. Ya está todo en
+`src/lib/business.ts` (`comprasCriterios`) y usado en FAQ/Confianza:
+cualquier marca/modelo/antigüedad/km (sin límite), averiados/accidentados
+caso por caso, **no** financiados ni con cargas pendientes, compran en
+toda España (recogida incluida), tasación gratuita y sin compromiso, pago
+en el momento, se encargan de titularidad y trámites, ~20 años de
+experiencia, y la ventaja real frente a un particular: al vendernos a
+nosotros, el vendedor queda exento de dar garantía. WhatsApp real
+confirmado: 622 177 052 (ya añadido al footer, junto al teléfono
+622 188 213 que ya se usaba).
+
+Dato estratégico para más adelante (fuera del alcance de esta landing):
+quieren especializarse en comprar **furgonetas y flotas de empresas** --
+Eliud mencionó un posible agente aparte que mapee webs/LinkedIn/Maps de
+empresas de compraventa para alimentar un funnel B2B en el CRM. No
+construido todavía, es una idea para un proyecto propio.
+
 ## 5. Datos que todavía necesito que me confirmes
 
-- Si 622 188 213 es también el número de WhatsApp conectado de verdad (hoy
-  el botón "Hablar con Automóviles Lucero" solo llama, no abre WhatsApp).
 - Dominio definitivo de la landing.
 - Fotografías reales (propias o con licencia) de un coche y una furgoneta
   para el hero -- hoy hay un recuadro honesto de "Fotografía de un coche/
@@ -122,8 +140,6 @@ lanzarlas. No he creado ni activado ninguna campaña real ni gastado nada
 ## 8. Lo que falta para producción (de lo que SÍ es código)
 
 - Fotografías reales del hero.
-- Confirmar si "Hablar con Automóviles Lucero" debe abrir WhatsApp además
-  de (o en vez de) llamar.
 - Decidir si las páginas legales deben indexarse en buscadores (hoy llevan
   `noindex` por defecto, criterio habitual, pero no pedido explícitamente).
 - Imagen de vista previa para redes sociales (Open Graph) -- no incluida

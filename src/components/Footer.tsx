@@ -12,6 +12,12 @@ export function Footer() {
             {business.telefonoContacto}
           </a>
         </p>
+        <p className="mt-1 text-sm text-white/70">
+          WhatsApp:{" "}
+          <a href={business.whatsappHref} target="_blank" rel="noopener noreferrer" className="underline">
+            {business.whatsapp}
+          </a>
+        </p>
         <nav aria-label="Enlaces legales" className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/80">
           <Link href="/" className="hover:text-white hover:underline">
             Página principal

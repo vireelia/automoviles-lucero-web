@@ -1,27 +1,41 @@
+// Respuestas reales confirmadas por Ramón (29/10/2026, transcripción de
+// audio) -- ver comprasCriterios en business.ts para el detalle completo.
 const preguntas = [
   {
     q: "¿Qué vehículos compráis?",
-    a: "Estudiamos solicitudes de coches y furgonetas. La aceptación depende de la valoración y de las condiciones de compra.",
+    a: "Coches, furgonetas y vehículos industriales de cualquier marca y modelo, sin límite de antigüedad ni de kilometraje. Tenemos interés especial en furgonetas.",
+  },
+  {
+    q: "¿Compráis vehículos averiados o accidentados?",
+    a: "Se estudia caso por caso -- envíanos los datos y las fotografías y te decimos si encaja.",
+  },
+  {
+    q: "¿Compráis vehículos financiados o con cargas pendientes?",
+    a: "No, de momento no compramos vehículos financiados ni con cargas pendientes.",
   },
   {
     q: "¿Cómo se calcula el precio?",
-    a: "Se consideran la marca, el modelo, el año, los kilómetros, el estado general y otros factores relevantes.",
+    a: "Se consideran la marca, el modelo, el año, los kilómetros, el estado general y otros factores relevantes del mercado.",
   },
   {
     q: "¿Solicitar una tasación me obliga a vender?",
-    a: "No. Solicitar una valoración no implica aceptar una propuesta de compra.",
+    a: "No. La tasación es gratuita y sin compromiso -- solicitarla no implica aceptar una propuesta de compra.",
   },
   {
     q: "¿Qué documentación necesito?",
-    a: "El equipo comercial te indicará qué documentación es necesaria para comprobar los datos y formalizar la operación.",
+    a: "Para tasar tu vehículo necesitamos: matrícula, marca, modelo, año, kilómetros, estado y fotografías.",
   },
   {
-    q: "¿Puedo vender una furgoneta de trabajo?",
-    a: "Puedes enviar una solicitud indicando el tipo de furgoneta y su estado. Automóviles Lucero estudiará si encaja en sus criterios de compra.",
+    q: "¿Cuándo y cómo me pagáis?",
+    a: "El pago se realiza en el momento de la compra. Además, nos encargamos del cambio de titularidad y de todos los trámites.",
+  },
+  {
+    q: "¿En qué zonas compráis?",
+    a: "Compramos en toda España. Si estás en Madrid nos desplazamos a tu domicilio; fuera de Madrid también recogemos el vehículo si el precio lo justifica.",
   },
   {
     q: "¿Cómo puedo contactar con Automóviles Lucero?",
-    a: "Puedes llamarnos al 622 188 213, o enviarnos tu solicitud desde el formulario de esta página.",
+    a: "Puedes llamarnos al 622 188 213, escribirnos por WhatsApp al 622 177 052, o enviarnos tu solicitud desde el formulario de esta página.",
   },
 ];
 

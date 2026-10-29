@@ -1,8 +1,10 @@
+// Ventajas reales confirmadas por Ramón (29/10/2026, transcripción de
+// audio) -- ver comprasCriterios en business.ts para el detalle completo.
 const mensajes = [
-  "Atención personalizada",
-  "Estudio individual de cada vehículo",
-  "Información clara sobre los siguientes pasos",
-  "Sin compromiso por solicitar una valoración",
+  "Tasación gratuita y sin compromiso",
+  "Pago en el momento de la compra",
+  "Nos encargamos del cambio de titularidad y de todos los trámites",
+  "Al vendernos a nosotros, quedas exento de dar garantía (obligación que sí tienes al vender a un particular)",
 ];
 
 export function TrustSection() {
