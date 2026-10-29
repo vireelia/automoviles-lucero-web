@@ -73,10 +73,16 @@ aquí van al mismo CRM real que ya usa el equipo (Clientes/Contactos).
 | `LUCERO_CRM_URL` | URL real del backend del CRM (ya puesta: producción real) |
 | `LUCERO_ADMIN_TOKEN` | Opcional, solo si en el futuro se protege `/tools/create_lead` con token |
 
-## 4. Datos que necesito que me confirmes (nunca inventados)
+## 4. Datos legales — ya confirmados (28/10/2026)
 
-- Razón social, NIF/CIF, domicilio social y correo oficial de privacidad
-  (para el aviso legal y la política de privacidad reales).
+Razón social, NIF/CIF, domicilio social, domicilio real de atención al
+público, correo de contacto y datos registrales ya están rellenados con
+datos reales (tarjeta de identificación fiscal de la AEAT + confirmación
+directa de Eliud) en `src/lib/business.ts`, aviso legal y política de
+privacidad.
+
+## 5. Datos que todavía necesito que me confirmes
+
 - Si 622 188 213 es también el número de WhatsApp conectado de verdad (hoy
   el botón "Hablar con Automóviles Lucero" solo llama, no abre WhatsApp).
 - Dominio definitivo de la landing.
@@ -86,8 +92,12 @@ aquí van al mismo CRM real que ya usa el equipo (Clientes/Contactos).
 - Proveedores reales de analítica/publicidad que se vayan a instalar
   (Google Analytics, Meta Pixel, Google Ads...), para añadirlos al
   inventario de cookies ANTES de activarlos.
+- Política de privacidad, sección "Destinatarios": listado concreto de
+  proveedores reales (hosting, CRM, comunicaciones) y plazo exacto de
+  conservación de datos cuando no hay compraventa -- quedan marcados
+  [PENDIENTE DE CONFIRMAR] dentro del propio texto.
 
-## 5. Despliegue (mismo patrón ya usado en el resto de proyectos de Vireliab)
+## 6. Despliegue (mismo patrón ya usado en el resto de proyectos de Vireliab)
 
 1. Crear el repositorio en GitHub (`vireelia/automoviles-lucero-landing` o
    el nombre que prefieras) y hacer push de este proyecto.
@@ -101,7 +111,7 @@ aquí van al mismo CRM real que ya usa el equipo (Clientes/Contactos).
    con un teléfono real tuyo, confirmar que aparece en Clientes del CRM,
    y borrarlo desde ahí si era solo una prueba.
 
-## 6. Campañas publicitarias — pendiente de tu confirmación, nada activado
+## 7. Campañas publicitarias — pendiente de tu confirmación, nada activado
 
 El encargo ya trae las palabras clave, negativas y los copys reales de
 Google Ads/Meta Ads/OpenAI Ads escritos por ti -- no hace falta que los
@@ -109,7 +119,7 @@ reescriba, ya están listos para pegar en cada plataforma cuando decidas
 lanzarlas. No he creado ni activado ninguna campaña real ni gastado nada
 (tal y como pedía el encargo).
 
-## 7. Lo que falta para producción (de lo que SÍ es código)
+## 8. Lo que falta para producción (de lo que SÍ es código)
 
 - Fotografías reales del hero.
 - Confirmar si "Hablar con Automóviles Lucero" debe abrir WhatsApp además

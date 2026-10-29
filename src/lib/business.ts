@@ -26,7 +26,10 @@ export const datosLegalesPendientes = {
   // comunicaciones reales del propio negocio.
   domicilioSocial: "Calle Cuart de Poblet, núm. 121, planta 2, puerta IZ, 28047 Madrid",
   domicilioFiscal: "Calle Cayetano Pando, núm. 3, planta BJ, 28047 Madrid",
-  correoContacto: PENDIENTE,
+  correoContacto: "autolunaslagunamadrid@gmail.com",
   telefono: business.telefonoContacto,
-  datosRegistrales: PENDIENTE,
+  // Dato real de la propia tarjeta de identificación fiscal de la AEAT
+  // (no hay un Registro Mercantil distinto en ese documento -- es lo que
+  // hay, confirmado por Eliud).
+  datosRegistrales: "NIF B88468749 (Agencia Tributaria), código electrónico de verificación 802729548286997A.",
 } as const;

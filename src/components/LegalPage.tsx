@@ -15,9 +15,9 @@ export function LegalPage({
       <p className="mt-2 text-sm text-gray">Última actualización: {actualizado}</p>
       {avisoBorrador && (
         <div className="mt-6 rounded-xl border border-gold bg-gray-light p-4 text-sm text-navy">
-          <strong>Borrador pendiente de revisión legal.</strong> Este texto todavía tiene datos
-          marcados como [PENDIENTE DE CONFIRMAR] y no debe publicarse como versión definitiva
-          hasta confirmarlos y, si procede, hacerlo revisar por un profesional. No constituye
+          <strong>Borrador pendiente de revisión legal.</strong> Los datos reales del negocio ya
+          están confirmados, pero este texto no ha sido revisado todavía por un profesional del
+          derecho. No debe publicarse como versión definitiva sin esa revisión, y no constituye
           asesoramiento jurídico.
         </div>
       )}
