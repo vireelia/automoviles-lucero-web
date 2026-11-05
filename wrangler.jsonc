@@ -9,6 +9,17 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
+  // Bucket real para las fotos/vídeos del vehículo (04/11/2026, "aqui pon
+  // una seccion para que se pueda añadir fotos o videos del coche"). El
+  // bucket en sí (automoviles-lucero-fotos) hay que crearlo una vez con
+  // `wrangler r2 bucket create automoviles-lucero-fotos` -- necesita el
+  // token real de Cloudflare, pendiente de que el usuario lo dé.
+  "r2_buckets": [
+    {
+      "binding": "FOTOS_VEHICULOS",
+      "bucket_name": "automoviles-lucero-fotos"
+    }
+  ],
   "observability": {
     "enabled": true
   }

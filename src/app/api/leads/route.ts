@@ -38,6 +38,10 @@ type SolicitudBody = ValoracionFormData & {
   idempotencyKey?: string;
   renderedAt?: number;
   origen?: { utm_source?: string; utm_medium?: string; utm_campaign?: string; utm_content?: string; pagina?: string };
+  // URLs reales ya subidas a R2 por /api/leads/upload antes de este envío
+  // (04/11/2026, "seccion para añadir fotos o videos") -- nunca un archivo
+  // en sí, solo el enlace real, para que el equipo las vea desde el aviso.
+  fotosUrls?: string[];
 };
 
 function construirNotas(data: SolicitudBody): string {
@@ -48,6 +52,7 @@ function construirNotas(data: SolicitudBody): string {
     data.matricula ? `Matrícula: ${data.matricula}.` : null,
     data.disponibleLlamada ? "Disponible para recibir una llamada." : null,
     data.comentarios ? `Comentarios del propietario: ${data.comentarios}` : null,
+    data.fotosUrls && data.fotosUrls.length > 0 ? `Fotos/vídeo adjuntos: ${data.fotosUrls.join(" | ")}` : null,
     data.origen?.pagina ? `Página de origen: ${data.origen.pagina}.` : null,
     data.origen?.utm_source ? `Procedencia: ${data.origen.utm_source}/${data.origen.utm_medium ?? ""}/${data.origen.utm_campaign ?? ""}.` : null,
   ].filter(Boolean);

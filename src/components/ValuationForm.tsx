@@ -37,6 +37,9 @@ function leerUtms() {
   };
 }
 
+const MAX_ARCHIVOS = 8;
+const MAX_ARCHIVO_MB = 25;
+
 export function ValuationForm({ tipoVehiculoPorDefecto, id }: { tipoVehiculoPorDefecto?: TipoVehiculo; id?: string }) {
   const [data, setData] = useState<ValoracionFormData>(() => initialData(tipoVehiculoPorDefecto ?? ""));
   const [errors, setErrors] = useState<ValidationErrors>({});
@@ -46,6 +49,14 @@ export function ValuationForm({ tipoVehiculoPorDefecto, id }: { tipoVehiculoPorD
   const idempotencyKeyRef = useRef<string>("");
   const formId = useId();
   const primerCampoRef = useRef<HTMLSelectElement>(null);
+
+  // Fotos/vídeo del vehículo (04/11/2026, "aqui pon una seccion para que se
+  // pueda añadir fotos o videos del coche") -- se suben a R2 aparte, antes
+  // de enviar el lead, y solo se guarda la URL real resultante (ver
+  // /api/leads/upload). Nunca se dice "adjuntado" sin que la subida haya
+  // terminado de verdad.
+  const [archivos, setArchivos] = useState<File[]>([]);
+  const [archivosError, setArchivosError] = useState<string | null>(null);
 
   useEffect(() => {
     renderedAtRef.current = Date.now();
@@ -68,6 +79,19 @@ export function ValuationForm({ tipoVehiculoPorDefecto, id }: { tipoVehiculoPorD
     setEstado("enviando");
     setMensajeError(null);
     try {
+      let fotosUrls: string[] = [];
+      if (archivos.length > 0) {
+        const formArchivos = new FormData();
+        for (const archivo of archivos) formArchivos.append("archivos", archivo);
+        const resSubida = await fetch("/api/leads/upload", { method: "POST", body: formArchivos });
+        const jsonSubida = (await resSubida.json()) as { ok: boolean; urls?: string[]; error?: string };
+        if (!resSubida.ok || !jsonSubida.ok) {
+          setEstado("error");
+          setMensajeError(jsonSubida.error ?? "No se pudieron subir las fotos/vídeo. Puedes enviarlas luego por WhatsApp.");
+          return;
+        }
+        fotosUrls = jsonSubida.urls ?? [];
+      }
       const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -76,9 +100,10 @@ export function ValuationForm({ tipoVehiculoPorDefecto, id }: { tipoVehiculoPorD
           renderedAt: renderedAtRef.current,
           idempotencyKey: idempotencyKeyRef.current,
           origen: leerUtms(),
+          fotosUrls,
         }),
       });
-      const json = await res.json();
+      const json = (await res.json()) as { ok: boolean; error?: string };
       if (!res.ok || !json.ok) {
         setEstado("error");
         setMensajeError(json.error ?? "No se pudo enviar la solicitud. Inténtalo de nuevo.");
@@ -212,6 +237,57 @@ export function ValuationForm({ tipoVehiculoPorDefecto, id }: { tipoVehiculoPorD
           <label htmlFor={`${formId}-llamada`} className="text-sm text-white">
             Estoy disponible para recibir una llamada
           </label>
+        </div>
+
+        <div className="sm:col-span-2">
+          <label htmlFor={`${formId}-fotos`} className="mb-1 block text-sm font-medium text-white">
+            Fotos o vídeo del vehículo (opcional)
+          </label>
+          <input
+            id={`${formId}-fotos`}
+            type="file"
+            multiple
+            accept="image/*,video/*"
+            onChange={(e) => {
+              const seleccionados = Array.from(e.target.files ?? []);
+              const combinados = [...archivos, ...seleccionados];
+              if (combinados.length > MAX_ARCHIVOS) {
+                setArchivosError(`Máximo ${MAX_ARCHIVOS} archivos.`);
+                return;
+              }
+              const demasiadoGrande = seleccionados.find((f) => f.size > MAX_ARCHIVO_MB * 1024 * 1024);
+              if (demasiadoGrande) {
+                setArchivosError(`${demasiadoGrande.name} supera ${MAX_ARCHIVO_MB}MB.`);
+                return;
+              }
+              setArchivosError(null);
+              setArchivos(combinados);
+              e.target.value = "";
+            }}
+            className="block w-full text-sm text-gray file:mr-4 file:rounded-full file:border-0 file:bg-gold file:px-4 file:py-2 file:text-sm file:font-semibold file:text-navy-dark file:transition hover:file:bg-gold-glow"
+          />
+          <p className="mt-1 text-xs text-gray">Hasta {MAX_ARCHIVOS} archivos, {MAX_ARCHIVO_MB}MB cada uno.</p>
+          {archivosError && <p className="mt-1 text-sm text-red-400">{archivosError}</p>}
+          {archivos.length > 0 && (
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {archivos.map((archivo, i) => (
+                <li
+                  key={`${archivo.name}-${i}`}
+                  className="flex items-center gap-2 rounded-full border border-gray-border bg-navy px-3 py-1.5 text-xs text-white"
+                >
+                  {archivo.name}
+                  <button
+                    type="button"
+                    onClick={() => setArchivos((prev) => prev.filter((_, idx) => idx !== i))}
+                    aria-label={`Quitar ${archivo.name}`}
+                    className="text-gray hover:text-white"
+                  >
+                    ✕
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
 
