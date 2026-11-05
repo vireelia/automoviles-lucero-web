@@ -27,7 +27,7 @@ export function StickyMobileCTA() {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-30 border-t border-gray-border bg-white p-3 shadow-[0_-4px_12px_rgba(0,0,0,0.08)] sm:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-30 border-t border-gray-border bg-navy p-3 shadow-[0_-4px_12px_rgba(0,0,0,0.4)] sm:hidden">
       <a
         href="#formulario"
         className="block rounded-full bg-gold px-5 py-3 text-center text-sm font-bold text-navy-dark"

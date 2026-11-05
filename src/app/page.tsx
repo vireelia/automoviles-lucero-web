@@ -5,6 +5,7 @@ import { Comparacion } from "@/components/Comparacion";
 import { HowItWorks } from "@/components/HowItWorks";
 import { TrustSection } from "@/components/TrustSection";
 import { FAQ } from "@/components/FAQ";
+import { LocationSection } from "@/components/LocationSection";
 import { FinalCTA } from "@/components/FinalCTA";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { ValuationForm } from "@/components/ValuationForm";
@@ -25,7 +26,7 @@ export default function Home() {
       <HowItWorks />
 
       <section id="formulario" className="mx-auto max-w-2xl px-4 py-14 sm:px-6 sm:py-20">
-        <h2 className="text-center text-2xl font-bold text-navy sm:text-3xl">
+        <h2 className="text-center text-2xl font-bold text-gold sm:text-3xl">
           Cuéntanos qué vehículo quieres vender
         </h2>
         <p className="mt-3 text-center text-sm text-gray sm:text-base">
@@ -39,6 +40,7 @@ export default function Home() {
 
       <TrustSection />
       <FAQ />
+      <LocationSection />
       <FinalCTA />
       <StickyMobileCTA />
     </>

@@ -95,10 +95,10 @@ export function ValuationForm({ tipoVehiculoPorDefecto, id }: { tipoVehiculoPorD
     return (
       <div
         role="status"
-        className="rounded-2xl border border-gray-border bg-gray-light p-8 text-center"
+        className="rounded-2xl border border-gray-border bg-navy-light p-8 text-center"
         id={id}
       >
-        <p className="text-lg font-semibold text-navy">
+        <p className="text-lg font-semibold text-gold">
           Hemos recibido tu solicitud. El equipo de Automóviles Lucero revisará los datos y
           contactará contigo para continuar con la valoración.
         </p>
@@ -111,7 +111,7 @@ export function ValuationForm({ tipoVehiculoPorDefecto, id }: { tipoVehiculoPorD
       id={id}
       onSubmit={onSubmit}
       noValidate
-      className="rounded-2xl border border-gray-border bg-white p-6 shadow-sm sm:p-8"
+      className="rounded-2xl border border-gray-border bg-navy-light p-6 shadow-sm sm:p-8"
     >
       {/* Honeypot real: oculto por CSS (no display:none/type=hidden), nunca
           lo ve ni lo rellena una persona real. */}
@@ -129,7 +129,7 @@ export function ValuationForm({ tipoVehiculoPorDefecto, id }: { tipoVehiculoPorD
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="sm:col-span-2">
-          <label htmlFor={`${formId}-tipo`} className="mb-1 block text-sm font-medium text-navy">
+          <label htmlFor={`${formId}-tipo`} className="mb-1 block text-sm font-medium text-white">
             Tipo de vehículo *
           </label>
           <select
@@ -138,7 +138,7 @@ export function ValuationForm({ tipoVehiculoPorDefecto, id }: { tipoVehiculoPorD
             required
             value={data.tipoVehiculo}
             onChange={(e) => set("tipoVehiculo", e.target.value as TipoVehiculo)}
-            className="w-full rounded-lg border border-gray-border px-3 py-2.5 text-black focus:border-navy"
+            className="w-full rounded-lg border border-gray-border bg-navy px-3 py-2.5 text-white focus:border-gold"
           >
             <option value="">Selecciona una opción</option>
             <option value="coche">Coche</option>
@@ -188,7 +188,7 @@ export function ValuationForm({ tipoVehiculoPorDefecto, id }: { tipoVehiculoPorD
         />
 
         <div className="sm:col-span-2">
-          <label htmlFor={`${formId}-comentarios`} className="mb-1 block text-sm font-medium text-navy">
+          <label htmlFor={`${formId}-comentarios`} className="mb-1 block text-sm font-medium text-white">
             Comentarios (opcional)
           </label>
           <textarea
@@ -196,7 +196,7 @@ export function ValuationForm({ tipoVehiculoPorDefecto, id }: { tipoVehiculoPorD
             rows={3}
             value={data.comentarios}
             onChange={(e) => set("comentarios", e.target.value)}
-            className="w-full rounded-lg border border-gray-border px-3 py-2.5 text-black focus:border-navy"
+            className="w-full rounded-lg border border-gray-border bg-navy px-3 py-2.5 text-white focus:border-gold"
           />
           {errors.comentarios && <p className="mt-1 text-sm text-red-600">{errors.comentarios}</p>}
         </div>
@@ -209,7 +209,7 @@ export function ValuationForm({ tipoVehiculoPorDefecto, id }: { tipoVehiculoPorD
             onChange={(e) => set("disponibleLlamada", e.target.checked)}
             className="h-4 w-4 rounded border-gray-border"
           />
-          <label htmlFor={`${formId}-llamada`} className="text-sm text-black">
+          <label htmlFor={`${formId}-llamada`} className="text-sm text-white">
             Estoy disponible para recibir una llamada
           </label>
         </div>
@@ -233,7 +233,7 @@ export function ValuationForm({ tipoVehiculoPorDefecto, id }: { tipoVehiculoPorD
       <button
         type="submit"
         disabled={estado === "enviando"}
-        className="mt-6 w-full rounded-full bg-navy px-8 py-3.5 text-base font-semibold text-white transition hover:bg-navy-light disabled:opacity-60 sm:w-auto"
+        className="mt-6 w-full rounded-full bg-gold px-8 py-3.5 text-base font-semibold text-navy-dark transition hover:bg-gold-glow disabled:opacity-60 sm:w-auto"
       >
         {estado === "enviando" ? "Enviando…" : "Enviar mi solicitud de valoración"}
       </button>
@@ -258,7 +258,7 @@ function Campo({
 }) {
   return (
     <div>
-      <label htmlFor={id} className="mb-1 block text-sm font-medium text-navy">
+      <label htmlFor={id} className="mb-1 block text-sm font-medium text-white">
         {label}
       </label>
       <input
@@ -269,7 +269,7 @@ function Campo({
         onChange={(e) => onChange(e.target.value)}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? `${id}-error` : undefined}
-        className="w-full rounded-lg border border-gray-border px-3 py-2.5 text-black focus:border-navy"
+        className="w-full rounded-lg border border-gray-border bg-navy px-3 py-2.5 text-white focus:border-gold"
       />
       {error && (
         <p id={`${id}-error`} className="mt-1 text-sm text-red-600">

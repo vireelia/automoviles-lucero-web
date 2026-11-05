@@ -3,6 +3,7 @@ import { Comparacion } from "@/components/Comparacion";
 import { HowItWorks } from "@/components/HowItWorks";
 import { TrustSection } from "@/components/TrustSection";
 import { FAQ } from "@/components/FAQ";
+import { LocationSection } from "@/components/LocationSection";
 import { business } from "@/lib/business";
 import type { TipoVehiculo } from "@/lib/validation";
 
@@ -37,7 +38,7 @@ export function VehicleLandingContent({
       <HowItWorks />
 
       <section id="formulario" className="mx-auto max-w-2xl px-4 py-14 sm:px-6 sm:py-20">
-        <h2 className="text-center text-2xl font-bold text-navy sm:text-3xl">
+        <h2 className="text-center text-2xl font-bold text-gold sm:text-3xl">
           Cuéntanos qué {tipo === "coche" ? "coche" : "furgoneta"} quieres vender
         </h2>
         <p className="mt-3 text-center text-sm text-gray sm:text-base">
@@ -51,6 +52,7 @@ export function VehicleLandingContent({
 
       <TrustSection />
       <FAQ />
+      <LocationSection />
     </>
   );
 }

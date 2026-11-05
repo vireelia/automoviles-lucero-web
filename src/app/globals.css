@@ -1,15 +1,22 @@
 @import "tailwindcss";
 
+/* Paleta real copiada de la otra web de Automóviles Lucero
+(compramostufurgon.com, confirmado en su propio CSS -- 04/11/2026, petición
+real: "copias la paleta de colores"). Tema oscuro "asfalto" con dorado, en
+vez del navy/blanco anterior. --color-navy* se mantienen por compatibilidad
+con componentes existentes, apuntando ahora a los valores reales oscuros. */
 :root {
-  --color-navy: #0b1f3a;
-  --color-navy-dark: #071326;
-  --color-navy-light: #15325c;
+  --color-navy: #0a0a0a;
+  --color-navy-dark: #000000;
+  --color-navy-light: #111111;
   --color-white: #ffffff;
   --color-black: #0a0a0a;
-  --color-gray-light: #f3f4f6;
-  --color-gray: #6b7280;
-  --color-gray-border: #e5e7eb;
-  --color-gold: #c9a24b;
+  --color-gray-light: #141414;
+  --color-gray: #a0a0a0;
+  --color-gray-border: #232323;
+  --color-gold: #c9a84c;
+  --color-gold-glow: #e8c96a;
+  --color-whatsapp: #4cc157;
 }
 
 @theme inline {
@@ -19,12 +26,14 @@
   --color-gray-light: var(--color-gray-light);
   --color-gray-border: var(--color-gray-border);
   --color-gold: var(--color-gold);
+  --color-gold-glow: var(--color-gold-glow);
+  --color-whatsapp: var(--color-whatsapp);
   --font-sans: var(--font-inter);
 }
 
 body {
-  background: var(--color-white);
-  color: var(--color-black);
+  background: var(--color-navy);
+  color: var(--color-white);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
 

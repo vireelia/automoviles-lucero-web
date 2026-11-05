@@ -13,7 +13,7 @@ export default function AvisoLegalPage() {
   return (
     <LegalPage titulo="Aviso legal" actualizado="28/10/2026" avisoBorrador>
       <section>
-        <h2 className="text-lg font-bold text-navy">1. Datos identificativos del titular</h2>
+        <h2 className="text-lg font-bold text-gold">1. Datos identificativos del titular</h2>
         <ul className="mt-2 list-disc space-y-1 pl-5">
           <li>Razón social: {d.razonSocial}</li>
           <li>Nombre comercial: {d.nombreComercial}</li>
@@ -27,7 +27,7 @@ export default function AvisoLegalPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">2. Objeto del sitio web</h2>
+        <h2 className="text-lg font-bold text-gold">2. Objeto del sitio web</h2>
         <p>
           Este sitio web tiene como finalidad informar sobre el servicio de compra de vehículos
           (coches y furgonetas) de {d.nombreComercial} y permitir a los propietarios solicitar
@@ -36,7 +36,7 @@ export default function AvisoLegalPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">3. Condiciones de uso</h2>
+        <h2 className="text-lg font-bold text-gold">3. Condiciones de uso</h2>
         <p>
           El acceso y uso de este sitio web atribuye la condición de usuario e implica la
           aceptación de las condiciones aquí recogidas. El usuario se compromete a hacer un uso
@@ -46,7 +46,7 @@ export default function AvisoLegalPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">4. Propiedad intelectual e industrial</h2>
+        <h2 className="text-lg font-bold text-gold">4. Propiedad intelectual e industrial</h2>
         <p>
           Los contenidos de este sitio web (textos, imágenes, diseño, logotipos) son propiedad
           de {d.nombreComercial} o de terceros que han autorizado su uso, y están protegidos por
@@ -55,7 +55,7 @@ export default function AvisoLegalPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">5. Responsabilidad</h2>
+        <h2 className="text-lg font-bold text-gold">5. Responsabilidad</h2>
         <p>
           {d.nombreComercial} no garantiza la disponibilidad continuada del sitio web ni se hace
           responsable de los daños derivados de la falta de disponibilidad por causas ajenas a
@@ -66,7 +66,7 @@ export default function AvisoLegalPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">6. Enlaces externos</h2>
+        <h2 className="text-lg font-bold text-gold">6. Enlaces externos</h2>
         <p>
           Este sitio web no se hace responsable del contenido de los sitios web a los que pueda
           enlazar ni de los sitios web desde los que pueda ser enlazado.
@@ -74,7 +74,7 @@ export default function AvisoLegalPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">7. Protección de datos y cookies</h2>
+        <h2 className="text-lg font-bold text-gold">7. Protección de datos y cookies</h2>
         <p>
           El tratamiento de los datos personales facilitados a través de este sitio web se rige
           por nuestra{" "}
@@ -90,7 +90,7 @@ export default function AvisoLegalPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">8. Legislación aplicable y jurisdicción</h2>
+        <h2 className="text-lg font-bold text-gold">8. Legislación aplicable y jurisdicción</h2>
         <p>
           Este aviso legal se rige por la legislación española, incluyendo la Ley 34/2002, de 11
           de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico, y

@@ -13,7 +13,7 @@ export default function PoliticaPrivacidadPage() {
   return (
     <LegalPage titulo="Política de privacidad" actualizado="28/10/2026" avisoBorrador>
       <section>
-        <h2 className="text-lg font-bold text-navy">1. Responsable</h2>
+        <h2 className="text-lg font-bold text-gold">1. Responsable</h2>
         <p>
           {d.razonSocial} ({d.nombreComercial}), con NIF/CIF {d.nifCif} y domicilio en{" "}
           {d.domicilioSocial}, es el responsable del tratamiento de los datos personales que nos
@@ -23,7 +23,7 @@ export default function PoliticaPrivacidadPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">2. Datos tratados</h2>
+        <h2 className="text-lg font-bold text-gold">2. Datos tratados</h2>
         <ul className="mt-2 list-disc space-y-1 pl-5">
           <li>Nombre</li>
           <li>Teléfono</li>
@@ -36,7 +36,7 @@ export default function PoliticaPrivacidadPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">3. Finalidades</h2>
+        <h2 className="text-lg font-bold text-gold">3. Finalidades</h2>
         <ul className="mt-2 list-disc space-y-1 pl-5">
           <li>Atender tu solicitud de valoración</li>
           <li>Contactar contigo para ampliar información</li>
@@ -48,7 +48,7 @@ export default function PoliticaPrivacidadPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">4. Bases jurídicas</h2>
+        <h2 className="text-lg font-bold text-gold">4. Bases jurídicas</h2>
         <p>
           Tratamos tus datos para atender tu solicitud de valoración como una actuación
           precontractual solicitada por ti. El cumplimiento de obligaciones legales es otra base
@@ -59,7 +59,7 @@ export default function PoliticaPrivacidadPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">5. Destinatarios</h2>
+        <h2 className="text-lg font-bold text-gold">5. Destinatarios</h2>
         <p>
           Tus datos se registran en nuestro sistema interno de gestión de clientes (CRM). Pueden
           acceder a ellos proveedores que nos prestan servicios de alojamiento, comunicaciones
@@ -70,7 +70,7 @@ export default function PoliticaPrivacidadPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">6. Conservación</h2>
+        <h2 className="text-lg font-bold text-gold">6. Conservación</h2>
         <p>
           Conservamos tus datos mientras dure la relación comercial derivada de tu solicitud y,
           posteriormente, durante los plazos legales de prescripción que resulten de aplicación.
@@ -79,7 +79,7 @@ export default function PoliticaPrivacidadPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">7. Tus derechos</h2>
+        <h2 className="text-lg font-bold text-gold">7. Tus derechos</h2>
         <p>
           Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación
           y portabilidad, así como retirar tu consentimiento en cualquier momento, escribiendo a{" "}
@@ -90,7 +90,7 @@ export default function PoliticaPrivacidadPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">8. Seguridad</h2>
+        <h2 className="text-lg font-bold text-gold">8. Seguridad</h2>
         <p>
           Aplicamos medidas técnicas y organizativas apropiadas para proteger tus datos. Ninguna
           medida de seguridad es absoluta; trabajamos para minimizar los riesgos de acceso no
@@ -99,7 +99,7 @@ export default function PoliticaPrivacidadPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-bold text-navy">9. Cambios en esta política</h2>
+        <h2 className="text-lg font-bold text-gold">9. Cambios en esta política</h2>
         <p>
           Podemos actualizar esta política para adaptarla a cambios legales o del propio
           servicio. Publicaremos la versión vigente en esta misma página, indicando la fecha de

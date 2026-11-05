@@ -20,7 +20,7 @@ const ventajas = [
 export function Comparacion() {
   return (
     <section className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20">
-      <h2 className="text-center text-2xl font-bold text-navy sm:text-3xl">
+      <h2 className="text-center text-2xl font-bold text-gold sm:text-3xl">
         Vender a un particular no siempre compensa
       </h2>
       <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-gray sm:text-base">
@@ -28,8 +28,8 @@ export function Comparacion() {
         venta particular.
       </p>
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
-        <div className="rounded-2xl border border-gray-border bg-gray-light p-6">
-          <h3 className="text-base font-bold text-navy sm:text-lg">Vender a un particular</h3>
+        <div className="rounded-2xl border border-gray-border bg-navy-light p-6">
+          <h3 className="text-base font-bold text-white sm:text-lg">Vender a un particular</h3>
           <ul className="mt-4 space-y-3 text-sm text-gray sm:text-base">
             {problemas.map((p) => (
               <li key={p} className="flex items-start gap-2">

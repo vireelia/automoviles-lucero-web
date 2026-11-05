@@ -41,15 +41,15 @@ const preguntas = [
 
 export function FAQ() {
   return (
-    <section className="bg-gray-light py-14 sm:py-20">
+    <section className="bg-navy py-14 sm:py-20">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <h2 className="text-center text-2xl font-bold text-navy sm:text-3xl">
+        <h2 className="text-center text-2xl font-bold text-gold sm:text-3xl">
           Preguntas frecuentes
         </h2>
-        <div className="mt-8 divide-y divide-gray-border rounded-2xl border border-gray-border bg-white">
+        <div className="mt-8 divide-y divide-gray-border rounded-2xl border border-gray-border bg-navy-light">
           {preguntas.map((p) => (
             <details key={p.q} className="group p-5">
-              <summary className="cursor-pointer list-none text-base font-semibold text-navy marker:content-none">
+              <summary className="cursor-pointer list-none text-base font-semibold text-white marker:content-none">
                 <span className="flex items-center justify-between gap-4">
                   {p.q}
                   <span aria-hidden="true" className="text-gold transition group-open:rotate-45">
